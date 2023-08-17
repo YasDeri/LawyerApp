@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/nametext"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="Имена:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:layout_toRightOf="@+id/nametext"
+                android:background="@drawable/edit_back"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/mobileText"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Тел.:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@+id/mobileText"
+                android:background="@drawable/edit_back"
+                android:padding="10dp"
+                android:text="" />
+
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:src="@drawable/call_new" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Имейл:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@+id/emailText"
+                android:background="@drawable/edit_back"
+                android:padding="10dp" />
+
+
+            <ImageView
+                android:id="@+id/emailImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/email" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/placesText"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Място:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+
+                android:layout_toRightOf="@+id/placesText"
+                android:background="@drawable/edit_back"
+                android:padding="10dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/notesText"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Бележки:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:background="@drawable/edit_back"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:layout_toRightOf="@+id/notesText"
+                android:padding="10dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/meetingofText"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Дата:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_toRightOf="@+id/meetingofText"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/date_event"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="16dp"
+
+                android:background="@drawable/edit_back"
+                android:gravity="center"
+                android:padding="5dp" />
+
+
+            <EditText
+                android:id="@+id/time_event"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:layout_toRightOf="@+id/date_event"
+                android:background="@drawable/edit_back"
+                android:gravity="center"
+                android:padding="5dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/reminderTExt"
+                android:layout_width="@dimen/add_metting_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Напомняне:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_toRightOf="@+id/reminderTExt"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reminder_date_event"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/add_metting_edittext_m_l"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@+id/reminderTExt"
+                android:background="@drawable/edit_back"
+                android:gravity="center"
+                android:padding="5dp" />
+
+
+            <EditText
+                android:id="@+id/reminder_time_event"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/add_meeting_edittext_m_r"
+                android:layout_toRightOf="@+id/reminder_date_event"
+                android:background="@drawable/edit_back"
+                android:gravity="center"
+                android:padding="5dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/update"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/save"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/delete_meeting"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.1">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/meeting" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/delete" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/backgroundColor" />
+
+</RelativeLayout>

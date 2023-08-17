@@ -1,0 +1,148 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Адвокатасист</string>
+    9919224017875346
+    <string name="admob_app_id" translatable="false">ca-app-pub-9919224017875346~8450402797</string>
+    <string name="banner_ad" translatable="false">ca-app-pub-9919224017875346/8970891941</string>
+    <string name="interstitial_ad" translatable="false">ca-app-pub-9919224017875346/4427397306</string>
+    <string name="native_ad" translatable="false">ca-app-pub-9919224017875346/6721205926</string>
+    <string name="video_ad" translatable="false">ca-app-pub-9919224017875346/3830245905</string>
+
+    <string name="administrive_case">Administrative case</string>
+    <string name="and">AND</string>
+    <string name="marriagework">Marriage work</string>
+    <string name="baha">ВАД</string>
+    <string name="bhox">ВНОХД</string>
+    <string name="vnhhd">VNHHD</string>
+    <string name="wan">WAN</string>
+    <string name="civil_lawsuit">Appeal civil lawsuit</string>
+    <string name="business_case">Appellate business case</string>
+    <string name="private_civil_case">Appeal Private Civil Case</string>
+    <string name="private_commercial_case">Appeal Private Commercial Case</string>
+    <string name="civil_case">Civil case</string>
+    <string name="civil_insolvency">Civil insolvency</string>
+    <string name="civil_insolvency_c">Civil Insolvency (C)</string>
+    <string name="enforcement">Enforcement</string>
+    <string name="casa_administrative_case">Cassation Administrative Case</string>
+    <string name="kand">KAND </string>
+    <string name="casa_civil_case">Cassation Civil Case</string>
+    <string name="casa_criminal_case">Cassation criminal case</string>
+    <string name="casa_trade">Cassation trade</string>
+    <string name="casa_pri_administrative_case">Cassation Private Administrative Case</string>
+    <string name="casa_pri_civil_case">Cassation Private Civil Case</string>
+    <string name="casa_pri_criminal_case">Cassation private criminal case</string>
+    <string name="casa_pri_commercial_case">Cassation Private Commercial Case</string>
+    <string name="king">KING </string>
+    <string name="eatch">WATCH </string>
+    <string name="nchc">NCHC </string>
+    <string name="trade_case">Trade case</string>
+    <string name="insolvency_business">Insolvency business</string>
+    <string name="insolvency_proceedings">Insolvency Proceedings (C)</string>
+    <string name="company_case">Company Case</string>
+    <string name="sun">SUN</string>
+    <string name="private_administrsative_case">Private administrative case</string>
+    <string name="private_civil_case1">Private civil case</string>
+    <string name="private_criminal_case">Private criminal case</string>
+    <string name="admirer">Admirer</string>
+    <string name="remorable">Remorable</string>
+    <string name="civil_claimint">Civil claimant</string>
+    <string name="civil_defendent">Civil defendant</string>
+    <string name="tenderer">Tenderer</string>
+    <string name="applicant">Applicant</string>
+    <string name="chopper">Chopper</string>
+    <string name="the_applicant">The applicant</string>
+    <string name="defendent">Defendant</string>
+    <string name="defendent_in_cas_comp">Defendant in a cassation complaint</string>
+    <string name="private_prosecutor">Private prosecutor</string>
+    <string name="private_complainmaint">Private complainant</string>
+    <string name="decision">Decision</string>
+    <string name="verdict">The verdict</string>
+    <string name="definition">Definition</string>
+    <string name="regulation">Regulation</string>
+    <string name="disposition">Disposition</string>
+    <string name="agreement">Agreement</string>
+    <string name="order">Order</string>
+    <string name="protocol">Protocol</string>
+    <string name="position">Position</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string-array name="nav_drawer_labels">
+        <item>Календар</item>
+        <item>Добави дело</item>
+        <item>Списък дела</item>
+        <item>Добави среща</item>
+        <item>Списък срещи</item>
+        <item>Добави клиент</item>
+        <item>Списък клиенти</item>
+        <item>Архив</item>
+        <item>Сътрудници</item>
+        <item>Профил</item>
+        <item>Премахни реклами</item>
+        <item>Контакт с нас</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--case info page-->
+    <string name="case_id_year">Дело №/Год:</string>
+    <string name="case_type">Вид дело:</string>
+    <string name="instance">Инстанция:</string>
+    <string name="judge">Съд:</string>
+    <string name="judge_count">Състав:</string>
+    <string name="behalf_of">Страна по дело:</string>
+    <string name="case_">дело</string>
+    <string name="case_U">Дело:</string>
+    <string name="dispute_for">Предмет:</string>
+    <string name="amount">Цена на иска:</string>
+    <string name="лв">лв</string>
+
+    <string name="client">Клиент:</string>
+    <string name="name">Име:</string>
+    <string name="phone">Тел:</string>
+    <string name="email">Имейл:</string>
+    <string name="add_client">Добави клиент</string>
+
+    <string name="price">Възнаграждение:</string>
+    <string name="paid">Платени:</string>
+    <string name="rest">Остатък:</string>
+    <string name="add_payment">Добави плащане</string>
+
+    <string name="opposite_side">Насрещна страна:</string>
+    <string name="lawyer">Адвокат:</string>
+    <string name="lawyer_name">Имена:</string>
+    <string name="lawyer_phone">Адвокат тел:</string>
+    <string name="lawyer_email">Адвокат имейл:</string>
+    <string name="add_opposite_side">Добави насрещна страна</string>
+
+    <string name="scheduling">Насрочване:</string>
+    <string name="add_scheduling">Добави насрочване</string>
+    <string name="see_all">виж всички</string>
+
+    <string name="legal_notice">Съдебно съобщение:</string>
+    <string name="done">Изпълнено</string>
+    <string name="add_legal_notice">Добави съдебно съобщение</string>
+
+    <string name="note">Бележки:</string>
+    <string name="add_case">Добро дело:</string>
+
+    <string name="judgment_act">Съдебен акт:</string>
+    <string name="number">Номер:</string>
+    <string name="took_effect">Влязло в сила:</string>
+    <string name="appeal_caase_n">Обжалване дело №:</string>
+
+    <string name="successfully">Успешно</string>
+    <string name="failed">Неуспешно</string>
+    <string name="edit">Редактиране</string>
+    <string name="add_to_archive">Добави към архив</string>
+
+    <string name="enter_text"></string>
+    <string name="clientineng">Клиент</string>
+    
+
+    
+</resources>

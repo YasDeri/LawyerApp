@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_drawer_width">260dp</dimen>
+
+    <dimen name="case_info_title_icon">35dp</dimen>
+
+    <dimen name="add_metting_text_width">80dp</dimen>
+    <dimen name="add_metting_edittext_m_l">12dp</dimen>
+    <dimen name="add_meeting_edittext_m_r">8dp</dimen>
+
+    <dimen name="add_client_text_width">80dp</dimen>
+    <dimen name="add_case_text_width">90dp</dimen>
+    <dimen name="add_case_text_width_long">120dp</dimen>
+    <dimen name="btnTextSize">12dp</dimen>
+</resources>

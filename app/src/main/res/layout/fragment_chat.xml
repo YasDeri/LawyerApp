@@ -1,0 +1,1653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bulgarian.lawerapp.fragment.ChatFragment">
+
+    <RelativeLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Дело:"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2dp"
+            android:orientation="vertical">
+
+            <!--Name-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nametext"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:text="Дело №./Год:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editCaseNo"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/nametext"
+                    android:background="@drawable/background_edittext"
+                    android:hint="No"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+
+
+                <Spinner
+                    android:id="@+id/spinCaseYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/editCaseNo"
+                    android:background="@drawable/spinner_back"
+                    android:padding="10dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+            <!--case type-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/Datetext"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Вид дело:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <com.jaiselrahman.hintspinner.HintSpinner
+                    android:id="@+id/spinCaseType"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/Datetext"
+                    android:background="@drawable/spinner_back"
+                    android:padding="10dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+            <!--Instances-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtInstances"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Инстанция:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/txtInstances"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnInstanceOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/instance_btn_back"
+                            android:gravity="center"
+                            android:text="I-ва"
+                            android:textColor="#fff" />
+
+                        <Button
+                            android:id="@+id/btnInstanceTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/instance_btn_back"
+                            android:gravity="center"
+                            android:text="II-ра"
+                            android:textColor="#fff" />
+
+
+                        <Button
+                            android:id="@+id/btnInstanceThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/instance_btn_back"
+                            android:gravity="center"
+                            android:text="III-та"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnEnforcement"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/instance_btn_back"
+                        android:gravity="center"
+                        android:text="Изпълнително дело"
+                        android:textAllCaps="false"
+                        android:textColor="#fff" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Дело №.:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinCaseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_edittext"
+                    android:padding="10dp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <!--judge -->
+            <RelativeLayout
+                android:id="@+id/ll_judgetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/judgetext"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Съдия изпълнител:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/conJugeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/judgetext"
+                    android:background="@drawable/background_edittext"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <!--judge contact -->
+            <RelativeLayout
+                android:id="@+id/ll_judge_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/judgeContacttext"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Тел.:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ConJudgeContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/judgeContacttext"
+                    android:background="@drawable/background_edittext"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+
+            <!--judge email -->
+            <RelativeLayout
+                android:id="@+id/ll_judge_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ConJudgeEmailtext"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:text="Имейл:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ConJudgeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/ConJudgeEmailtext"
+                    android:background="@drawable/background_edittext"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <!--Court list-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/courtListTxt"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Съд:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinCourtList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/background_edittext"
+                        android:completionThreshold="0"
+                        android:padding="10dp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtCourtWebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:padding="10dp"
+                    android:text="Website"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!--judge Name -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtJudgeName"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="Състав:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editJudgeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/txtJudgeName"
+                    android:background="@drawable/background_edittext"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <!--On Behalf-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtBehalf"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Страна по дело:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinBehalf"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/txtBehalf"
+                    android:background="@drawable/spinner_back"
+                    android:padding="10dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!--Despute-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/nameDespute"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="Предмет:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editDespute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/nameDespute"
+                    android:background="@drawable/background_edittext"
+                    android:hint="Текст"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNotPaid"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instance_btn_back"
+                    android:gravity="center"
+                    android:text="Неоценяем"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btnPaid"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instance_btn_back"
+                    android:gravity="center"
+                    android:text="Оценяем"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+
+                <EditText
+                    android:id="@+id/editCost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtJudgeName"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_edittext"
+                    android:hint="Цена"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <!--Client-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtHeaderClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Клиент:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeaderClient"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtClient"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Име:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtClient"
+                        android:background="@drawable/background_edittext"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spinClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:completionThreshold="0"
+                            android:padding="10dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/rlClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_add_client"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="24dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/addclient" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_client"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/fragment_add_client_incase" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--Amount-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtHeaderPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Възнаграждение:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtHeaderPayment"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/nameAmount"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Възнаграждение:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/nameAmount"
+                        android:background="@drawable/background_edittext"
+                        android:hint="номер"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--Price-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/namePrice"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:text="Платени:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/namePrice"
+                    android:background="@drawable/background_edittext"
+                    android:hint="номер"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+
+            <!--PayAmount-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/namePayAmount"
+                    android:layout_width="@dimen/add_case_text_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:text="Остатък:"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editPayAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/namePayAmount"
+                    android:background="@drawable/background_edittext"
+                    android:hint="номер"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <!--AgainstName-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtHeaderRespondent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Насрещна страна:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/txtAgainstName"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Имена:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAgainstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtAgainstName"
+                        android:background="@drawable/background_edittext"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+
+                <!--AgainstMob-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtAgainstMob"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Тел.:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAgainstMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:inputType="phone"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtAgainstMob"
+                        android:background="@drawable/background_edittext"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+
+                <!--AgainstLawyer-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtAgainstLawyer"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Адвокат:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAgainstLawyer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtAgainstLawyer"
+                        android:background="@drawable/background_edittext"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <!--AgainstLawyerMob-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtAgainstLawyerMob"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Адвокат тел.:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAgainstLawyerMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:inputType="phone"
+                        android:layout_toRightOf="@+id/txtAgainstLawyerMob"
+                        android:background="@drawable/background_edittext"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <!--AgainstLawyerEmail-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtAgainstLawyerEmail"
+                        android:layout_width="@dimen/add_case_text_width_long"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="Адвокат имейл:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAgainstLawyerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtAgainstLawyerEmail"
+                        android:background="@drawable/background_edittext"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#D0CFCF"/>
+
+                <LinearLayout
+                    android:id="@+id/llRespondent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_against"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/add_respondent_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Добави насрещна страна"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgMoreRespondent"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:src="@drawable/add_respondent"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearMoreRespondent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgCutRespondent"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="14dp"
+                        android:src="@drawable/cut" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/txtAgainstNameTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Against"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editAgainstNameTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/txtAgainstNameTwo"
+                            android:background="@drawable/background_edittext"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+
+                    <!--AgainstMob-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAgainstMobTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Tel:"
+
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editAgainstMobTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:layout_toRightOf="@+id/txtAgainstMobTwo"
+                            android:background="@drawable/background_edittext"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+
+                    <!--AgainstLawyer-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAgainstLawyerTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Lawyer:"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editAgainstLawyerTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/txtAgainstLawyerTwo"
+                            android:background="@drawable/background_edittext"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <!--AgainstLawyerMob-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAgainstLawyerMobTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Against tel:"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editAgainstLawyerMobTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/txtAgainstLawyerMobTwo"
+                            android:background="@drawable/background_edittext"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <!--AgainstLawyerEmail-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAgainstLawyerEmailTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Lawyer Email"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editAgainstLawyerEmailTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/txtAgainstLawyerEmailTwo"
+                            android:background="@drawable/background_edittext"
+                            android:padding="10dp"
+                            android:inputType="textEmailAddress"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--HearingDate-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtHeaderhearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Насрочване:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/txtHearingDate"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Насрочване:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_toEndOf="@+id/txtHearingDate"
+                        android:layout_toRightOf="@+id/txtHearingDate"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/editHearingDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_edittext"
+                            android:cursorVisible="false"
+                            android:drawableRight="@drawable/calendar"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Дата"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+
+                        <EditText
+                            android:id="@+id/editHearingTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/editHearingDate"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_edittext"
+                            android:cursorVisible="false"
+                            android:drawableRight="@drawable/clock"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Час"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--RemindDate-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/txtRemindDate"
+                        android:layout_width="@dimen/add_case_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Напомняне:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/txtRemindDate"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/editRemindDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_edittext"
+                            android:cursorVisible="false"
+                            android:drawableRight="@drawable/calendar"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Дата"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+                        <EditText
+                            android:id="@+id/editRemindTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/editRemindDate"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_edittext"
+                            android:cursorVisible="false"
+                            android:drawableRight="@drawable/clock"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="Час"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--CourtMessage-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtHeaderCourtMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Съдебно съобщение:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/editCourtMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/background_edittext"
+                        android:hint="Текст"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/relDD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editCourtMessage"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtCourtMessageDadlineDate"
+                            android:layout_width="@dimen/add_case_text_width"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Краен срок:"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/txtCourtMessageDadlineDate"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/editCourtMessageDadlineDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/background_edittext"
+                                android:cursorVisible="false"
+                                android:drawableRight="@drawable/calendar"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Дата"
+                                android:padding="10dp"
+                                android:textSize="13dp" />
+
+
+                            <EditText
+                                android:id="@+id/editCourtMessageDadlineTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/editCourtMessageDadlineDate"
+                                android:layout_weight="1"
+                                android:background="@drawable/background_edittext"
+                                android:cursorVisible="false"
+                                android:drawableRight="@drawable/clock"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Час"
+                                android:padding="10dp"
+                                android:textSize="13dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <!--CourtMessageDadlineReminderDate-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relDD"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtCourtMsgReminderD"
+                            android:layout_width="@dimen/add_case_text_width"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:text="Напомняне:"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/txtCourtMsgReminderD"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <EditText
+                                android:id="@+id/editCourtMsgReminderD"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/txtCourtMsgReminderD"
+                                android:layout_weight="1"
+                                android:background="@drawable/background_edittext"
+                                android:cursorVisible="false"
+                                android:drawableRight="@drawable/calendar"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Дата"
+                                android:padding="10dp"
+                                android:textSize="13dp" />
+
+
+                            <EditText
+                                android:id="@+id/editCourtMsgReminderT"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/editCourtMsgReminderD"
+                                android:layout_weight="1"
+                                android:background="@drawable/background_edittext"
+                                android:cursorVisible="false"
+                                android:drawableRight="@drawable/clock"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Час"
+                                android:padding="10dp"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--Notes-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtHeaderNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Бележки:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/editNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/background_edittext"
+                        android:hint="Текст"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--Judgement type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtHeaderJudgmentType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="Съдебен акт:"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/txtJudgement"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Съдебен акт:"
+                            android:textColor="#333"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinJudgementType"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/txtJudgement"
+                            android:background="@drawable/spinner_back"
+                            android:padding="10dp"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/editJudgmentNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/spinJudgementType"
+                            android:background="@drawable/background_edittext"
+                            android:hint="Hомер"
+                            android:padding="10dp"
+                            android:textSize="13dp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <!--TookEffect-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtTookEffect"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="Влязло в сила:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editTookEffect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtTookEffect"
+                        android:background="@drawable/background_edittext"
+                        android:cursorVisible="false"
+                        android:drawableRight="@drawable/calendar"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Дата"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <!--AppealCaseNo-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtAppealCaseNo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Обжалване дело №:"
+                        android:textColor="#333"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAppealCaseNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/txtAppealCaseNo"
+                        android:background="@drawable/background_edittext"
+                        android:hint="Текст"
+                        android:padding="10dp"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--Add case-->
+            <ImageView
+                android:id="@+id/addCase"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/save" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

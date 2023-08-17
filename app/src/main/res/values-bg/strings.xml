@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Адвокатасист</string>
+    <string name="administrive_case">Административно дело</string>
+    <string name="and">АНД</string>
+    <string name="marriagework">Брачно дело </string>
+    <string name="baha">ВАНД</string>
+    <string name="bhox">ВНОХД</string>
+    <string name="vnhhd">ВНЧХД</string>
+    <string name="wan">ВЧНД</string>
+    <string name="civil_lawsuit">Въззивно гражданско дело</string>
+    <string name="business_case">Въззивно търговско дело</string>
+    <string name="private_civil_case">Въззивно частно гражданско дело</string>
+    <string name="private_commercial_case">Въззивно частно търговско дело</string>
+    <string name="civil_case">Гражданско дело</string>
+    <string name="civil_insolvency">Гражданско дело по несъстоятелност </string>
+    <string name="civil_insolvency_c">Гражданско дело по несъстоятелност (В) </string>
+    <string name="enforcement">Изпълнително дело </string>
+    <string name="casa_administrative_case">Касационно административно дело</string>
+    <string name="kand">КАНД </string>
+    <string name="casa_civil_case">Касационно гражданско дело </string>
+    <string name="casa_criminal_case">Касационно наказателно дело</string>
+    <string name="casa_trade">Касационно търговско дело </string>
+    <string name="casa_pri_administrative_case">Касационно частно административно дело</string>
+    <string name="casa_pri_civil_case">Касационно частно гражданско дело</string>
+    <string name="casa_pri_criminal_case">Касационно частно наказателно дело</string>
+    <string name="casa_pri_commercial_case">Касационно частно търговско дело </string>
+    <string name="king">КЧАНД </string>
+    <string name="eatch">НОХД </string>
+    <string name="nchc">НЧХД </string>
+    <string name="trade_case">Търговско дело </string>
+    <string name="insolvency_business">Търговско дело по несъстоятелност </string>
+    <string name="insolvency_proceedings">Търговско дело по несъстоятелност (В) </string>
+    <string name="company_case">Фирмено дело</string>
+    <string name="sun">ЧАНД</string>
+    <string name="private_administrsative_case">Частно административно дело</string>
+    <string name="private_civil_case1">Частно гражданско дело</string>
+    <string name="private_criminal_case">Частно наказателно дело</string>
+    <string name="admirer">Въззивник</string>
+    <string name="remorable">Въззиваем</string>
+    <string name="civil_claimint">Граждански ищец</string>
+    <string name="civil_defendent">Граждански ответник</string>
+    <string name="tenderer">Жлабоподател</string>
+    <string name="applicant">Заявител</string>
+    <string name="chopper">Касатор</string>
+    <string name="the_applicant">Молител</string>
+    <string name="defendent">Ответник</string>
+    <string name="defendent_in_cas_comp">Ответник по касационна жалба  </string>
+    <string name="judge">Съд</string>
+    <string name="private_prosecutor">Частен обвинител</string>
+    <string name="private_complainmaint">Частен тъжител</string>
+    <string name="decision">Решение</string>
+    <string name="verdict">Присъда</string>
+    <string name="definition">Определение</string>
+    <string name="regulation">Постановление</string>
+    <string name="disposition">Разпореждане</string>
+    <string name="agreement">Споразумение</string>
+    <string name="order">Заповед</string>
+    <string name="protocol">Протокол</string>
+    <string name="position">Становище</string>
+
+
+</resources>
